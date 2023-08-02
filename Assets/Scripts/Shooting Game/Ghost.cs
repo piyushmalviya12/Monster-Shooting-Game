@@ -37,7 +37,9 @@ public class Ghost : MonoBehaviour
         {
            
             Destroy(gameObject);
+            
             gp.AddScore();
+            
 
 
         }

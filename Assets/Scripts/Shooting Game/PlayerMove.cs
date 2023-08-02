@@ -12,7 +12,7 @@ public class PlayerMove : MonoBehaviour
     private SpriteRenderer sr;
     private Rigidbody2D myBody;
     private bool isGrounded;
-    YouWinpanel youwin;
+   // YouWinpanel youwin;
     //private int life= 3;
   //  public Rigidbody2D playerPrefab;
     //public Vector2 prefabPos;
@@ -69,8 +69,8 @@ public class PlayerMove : MonoBehaviour
 
             Destroy(gameObject);
             
-            SceneManager.LoadScene(2);
-            youwin.winPanel();
+            SceneManager.LoadScene("GameOver");
+           // youwin.winPanel();
 
 
 

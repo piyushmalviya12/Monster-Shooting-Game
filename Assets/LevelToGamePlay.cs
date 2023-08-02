@@ -15,6 +15,12 @@ public class LevelToGamePlay : MonoBehaviour
         SceneManager.LoadScene("Levels");
     }
 
+    public void GoToGamePlayButton1()
+    {
+        SceneManager.LoadScene("GamePlay");
+        ScoreCounter.scoreValue = 0;
+    }
+
 }
 
    
