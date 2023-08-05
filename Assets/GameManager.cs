@@ -7,6 +7,8 @@ public class GameManager : MonoBehaviour
 {
     [SerializeField]
     private GameObject[] players;
+    
+    
 
     public static GameManager instance;
     private int _charIndex;
@@ -28,6 +30,8 @@ public class GameManager : MonoBehaviour
             Destroy(gameObject);
         }
         DontDestroyOnLoad(gameObject);
+       
+
     }
 
     private void OnEnable()

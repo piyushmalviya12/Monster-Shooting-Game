@@ -6,20 +6,22 @@ using UnityEngine.UI;
 
 public class GamePlayUIController : MonoBehaviour
 {
-   // public  Text score;
-
+    // static Text levelClearText;
     
-   //public  int playerscore;
+    // internal  string levelclearText;
+
+
+    //public  int playerscore;
 
     LevelButtons levelButtons;
 
-   //public int ss;
-    
+    //public int ss;
 
     
-    
 
-  
+
+
+
 
     public  void AddScore()
     {
@@ -37,10 +39,13 @@ public class GamePlayUIController : MonoBehaviour
         if (ScoreCounter.scoreValue == 5)
         {
             SceneManager.LoadScene("GameWin");
+
+           // levelclearText = "Level 1 Cleared";
         }
         else if (ScoreCounter.scoreValue == 10)
         {
             SceneManager.LoadScene("GameWin");
+           // levelclearText = "Level 2 Cleared";
         }
         else if (ScoreCounter.scoreValue == 15)
         {

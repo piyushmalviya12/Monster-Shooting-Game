@@ -3,12 +3,16 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.SocialPlatforms.Impl;
+using UnityEngine.UI;
 
 public class LevelButtons : MonoBehaviour
 {
 
     public GameObject[] buttons;
     GamePlayUIController gamePlayUIController;
+
+    //public Button button;
+    public Color wantedColor;
    
    
     
@@ -23,12 +27,14 @@ public class LevelButtons : MonoBehaviour
         if (ScoreCounter.scoreValue <=0)
         {
             SceneManager.LoadScene("GamePlay");
+            //ChangeButtonColor();
 
         }
     }
     public void Button2(){
         if(ScoreCounter.scoreValue >= 4){
             SceneManager.LoadScene("GamePlay");
+            //ChangeButtonColor();
         }
     }
     public void Button3(){
@@ -123,6 +129,14 @@ public class LevelButtons : MonoBehaviour
         {
             SceneManager.LoadScene("GamePlay");
         }
+    }
+
+    public void ChangeButtonColor()
+    {
+        ColorBlock colorBlock = new ColorBlock();
+        colorBlock.normalColor = wantedColor;
+        colorBlock.highlightedColor = wantedColor;
+        colorBlock.pressedColor = wantedColor;
     }
     // Start is called before the first frame update
     /* void Start()

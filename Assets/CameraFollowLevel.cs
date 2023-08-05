@@ -5,30 +5,38 @@ using UnityEngine;
 
 public class CameraFollowLevel : MonoBehaviour
 {
-    private Transform ScrollPosition;
-    private Vector3 temppos;
-
     [SerializeField]
-    private float maxX, minX;
+    private Transform targetToFollow;
 
-
-    void Start()
+    private void Update()
     {
-        ScrollPosition = GameObject.FindWithTag("ScrollLimit").transform;
+        transform.position = new Vector2(Mathf.Clamp(targetToFollow.position.x,-634.64f,49.99f),0
+            
+            );
     }
+    //private Vector3 temppos;
 
 
-    void LateUpdate()
-    {
-        
-            temppos = transform.position; // camera's current position
-            temppos.x = ScrollPosition.position.x;
-        
-        if (temppos.x > maxX)
-            temppos.x = maxX;
-        if (temppos.x < minX)
-            temppos.x = minX;
-        transform.position = temppos;
-    }
+
+
+
+    /* void Start()
+     {
+         ScrollPosition = GameObject.FindWithTag("ScrollLimit").transform;
+ }
+
+     void LateUpdate()
+     {
+
+             temppos = transform.position; // camera's current position
+             temppos.x = ScrollPosition.position.x;
+
+         if (temppos.x > maxX)
+             temppos.x = maxX;
+         if (temppos.x < minX)
+             temppos.x = minX;
+         transform.position = temppos;
+     }*/
+
 } 
 
